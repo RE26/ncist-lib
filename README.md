@@ -3,21 +3,25 @@
 #### 介绍
 适用于ncist图书馆的座位自动预约操作
 
-#### 软件架构
-软件架构说明
+####版本说明
+ python 3.9
+ Chrom浏览器版本 > 131
 
 
-#### 安装教程
+#### 使用教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  利用pip安装requirements.txt中所需要的包
+2.  打开main.py更改所需要修改的必须参数
+3.  输入 python3 main.py 运行
+4.  本程序可以运行时自动抢占座位，图书馆每天预约时间为早上七点半，建议设置定时任务为7.29自动执行，程序中可以自己判定到达30后进行自动执行抢座行为。
 
-#### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+####  **整体说明** 
+
+  整体代码架构不是很复杂，有点python基础的都可以看懂，主要是运用了request发包放包进行预约操作，但是在登陆获取token中发送的密码为rsa加密后的，由于本人技术能力有限，无法模拟出此项加密，欢迎各路大佬来改进此项步骤并探讨沟通，针对这个问题，本软件运用了DrissionPage开源库进行模拟Chrom浏览器前端进行登陆操作，再获取到token后通过request发包来进行预约座位。
+  现在由于考研马上来了没有太多时间进行进一步优化，后期希望可以制作出可视化软件，打包为exe文件，增加自动设置定时任务功能，攻克这个加密模块，加密模块看起来不是很难，开始先发一个包去获取publicKey的loginKey，然后利用publickey对‘loginkey+password’进行加密，然后发包过去，可是我利用同样方式加密后发送数据包却一直显示loginkey错误，希望有大佬可以帮忙解决这个问题一起探讨。
+  最后，祝应大计算机学子们考研成功，一举夺魁。
+
 
 #### 参与贡献
 
@@ -27,11 +31,4 @@
 4.  新建 Pull Request
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
